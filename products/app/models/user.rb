@@ -3,6 +3,8 @@ class User < ApplicationRecord
 
   validates :mail, presence: true, uniqueness: true
 
+  has_one :user_info
+  
   def self.new_remember_token
     SecureRandom.urlsafe_base64
   end

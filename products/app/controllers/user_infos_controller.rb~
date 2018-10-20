@@ -1,0 +1,13 @@
+class UserInfosController < ApplicationController
+  def new
+  end
+
+  def show
+  end
+
+  def upload
+  end
+
+  def create
+  end
+end
