@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
   def create
     if @user.authenticate(session_params[:password])
       sign_in(@user)
-      redirect_to profile_path, id: @user.id
+      redirect_to profile_path
     else
       flash.now[:danger] = t('.flash.invalid_password')
       render 'new'

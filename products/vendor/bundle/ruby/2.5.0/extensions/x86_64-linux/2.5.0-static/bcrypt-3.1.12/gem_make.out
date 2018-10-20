@@ -1,0 +1,19 @@
+current directory: /home/ubuntu/Documents/SD_1802/products/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.12/ext/mri
+/home/ubuntu/.rbenv/versions/2.5.0-rc1/bin/ruby -r ./siteconf20181020-19541-1rtqxeg.rb extconf.rb
+creating Makefile
+
+current directory: /home/ubuntu/Documents/SD_1802/products/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/Documents/SD_1802/products/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/ubuntu/Documents/SD_1802/products/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20181020-19541-1mtrzjm

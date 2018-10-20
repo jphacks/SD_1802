@@ -1,6 +1,6 @@
 class UserInfosController < ApplicationController
   def new
-    @info = UserInfo.new
+    @info = UserInfo.new(user_id: @current_user.id)
   end
 
   def show

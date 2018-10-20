@@ -10,6 +10,5 @@ Rails.application.routes.draw do
 
   get    'profile_show', to: 'user_infos#show'
   
-  post   'bin',    to: 'hello.php'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,2 +1,10 @@
-<h1>UserInfos#show</h1>
-<p>Find me in app/views/user_infos/show.html.erb</p>
+<%= @infos.each do |info| %>
+<p>
+  <%= info.name %>
+  <%= image_tag info.image.url%>
+</p>
+
+
+<%end%>
+
+
