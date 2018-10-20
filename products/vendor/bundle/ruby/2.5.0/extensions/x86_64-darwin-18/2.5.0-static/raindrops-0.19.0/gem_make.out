@@ -1,0 +1,35 @@
+current directory: /Users/tatsuya/Desktop/jphacks/github/SD_1802/products/vendor/bundle/ruby/2.5.0/gems/raindrops-0.19.0/ext/raindrops
+/Users/tatsuya/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20181020-92697-pgxrpa.rb extconf.rb
+checking for mmap() in sys/mman.h... yes
+checking for munmap() in sys/mman.h... yes
+checking for mremap() in sys/mman.h... no
+checking for linux/tcp.h... no
+checking for netinet/tcp.h... yes
+checking for netinet/tcp_fsm.h... yes
+checking for struct tcp_info in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,netinet/tcp.h,netinet/tcp_fsm.h... no
+checking for getpagesize() in unistd.h... yes
+checking for rb_thread_call_without_gvl()... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_io_blocking_region()... yes
+checking for GCC 4+ atomic builtins... yes
+creating extconf.h
+creating Makefile
+
+current directory: /Users/tatsuya/Desktop/jphacks/github/SD_1802/products/vendor/bundle/ruby/2.5.0/gems/raindrops-0.19.0/ext/raindrops
+make "DESTDIR=" clean
+
+current directory: /Users/tatsuya/Desktop/jphacks/github/SD_1802/products/vendor/bundle/ruby/2.5.0/gems/raindrops-0.19.0/ext/raindrops
+make "DESTDIR="
+compiling linux_inet_diag.c
+In file included from linux_inet_diag.c:4:
+./my_fileno.h:23:12: warning: unused function 'my_fileno' [-Wunused-function]
+static int my_fileno(VALUE io)
+           ^
+1 warning generated.
+compiling raindrops.c
+compiling tcp_info.c
+linking shared-object raindrops_ext.bundle
+
+current directory: /Users/tatsuya/Desktop/jphacks/github/SD_1802/products/vendor/bundle/ruby/2.5.0/gems/raindrops-0.19.0/ext/raindrops
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 raindrops_ext.bundle ./.gem.20181020-92697-1v6z48q
