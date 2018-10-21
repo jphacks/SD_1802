@@ -37,7 +37,7 @@
 結果はユーザーへ**LINE Notify**で通知されます。  
 スマートウォッチなどのウェアラブルデバイスを用いることで、相手に悟られる事なく名前を知ることができます。
 
-![model_image](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/model.png)
+![model_image](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/model.png =600x)
 
 ### 解決出来ること
 名前を忘れてしまった人に会ったとしても、円滑なコミュニケーションを行うことができます。
