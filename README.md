@@ -1,6 +1,6 @@
 # タソカレ
 
-[![Product Name](image.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
+[![Product Name](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/top.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
 
 ## 製品概要
 ### 君の名は？ X Tech
@@ -30,6 +30,8 @@
 #### 1. Raspberry Pi で写真を撮影・アップロード
 撮影デバイスには**Raspberry Pi 3 Model B+**を用いました。  
 ポケットサイズなのでユーザーは素早く手軽に写真を撮影することが可能です。
+
+![raspi](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/raspi.jpg)
 
 #### 2. OpenFace を用いた顔認証
 撮影された写真はサーバにアップロードされ、**Python + OpenFace**で解析されます。  
@@ -77,6 +79,7 @@
 ### 独自開発技術（Hack Dayで開発したもの）
 #### 2日間に開発した独自の機能・技術
 予定していた全ての機能をHack Day内で実現することができた。
+
 * 撮影用デバイスの作成（Raspberry Pi + カメラモジュール）
 * Raspberry Pi からサーバーへ画像のアップロード（Python）
 * 顔認証システム（Python + OpenFace）
