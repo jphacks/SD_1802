@@ -1,17 +1,39 @@
 <%= form_for @user, url: users_path do |f| %>
 
-<%= f.label :mail %>
-<%= f.text_field :mail %>
-<br>
+<block>
+    <center>
+    <h1>タソカレ 登録フォーム</h1>
+    <ul>
+        <li>本登録をもって撮影に同意したものと見なします。</li>
+        <li>登録する顔画像は正面を向いたものをご用意ください。</li>
+    </ul>
+    <!-- MESSAGE -->
+        <section id="sec01">
+            <header>
+                <h2><span>MESSAGE</span></h2>
+            </header>
+            <div class="innerS">
+                <ul>
+                    <li>本登録をもって撮影に同意したものと見なします。</li>
+                    <li>登録する顔画像は正面を向いたものをご用意ください。</li>
+                </ul>
+            </div>
+        </section>
+    <!-- // MESSAGE -->
+    <%= f.label :mail %>
+    <%= f.text_field :mail %>
+    <br>
 
-<%= f.label :password %>
-<%= f.password_field :password %>
-<br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <br>
 
-<%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation %>
-<br>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+    <br>
 
-<%= f.submit '登録' %>
+    <%= f.submit '登録' %>
+    </center>
 
+</block>
 <% end %>
