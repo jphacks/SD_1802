@@ -1,16 +1,19 @@
 <%= form_for :session, url: login_path do |f| %>
-    <block>
-        <h1>タソカレ ログインフォーム</h1>
-        
-        <%= f.label :mail %><br>
-        <%= f.text_field :mail %>
-        <br>
-        <%= f.label :password%><br>
-        <%= f.password_field :password %>
-        <br>
 
-        <%= f.submit 'ログイン' %><br>
-	<%= link_to '登録はこちら', users_path%>
-    </block>
+<center>
+<block>
+  <h1>タソカレ ログインフォーム</h1>
+  
+  <%= f.label :mail %><br>
+  <%= f.text_field :mail %>
+  <br>
+  <%= f.label :password%><br>
+  <%= f.password_field :password %>
+  <br>
+  
+  <%= f.submit 'ログイン' %><br>
+  <%= link_to '登録はこちら', users_path%>
+</block>
+</center>
 
 <% end %>

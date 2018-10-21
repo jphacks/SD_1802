@@ -3,20 +3,15 @@
 <block>
     <center>
     <h1>タソカレ 登録フォーム</h1>
-    <ul>
-        <li>本登録をもって撮影に同意したものと見なします。</li>
-        <li>登録する顔画像は正面を向いたものをご用意ください。</li>
-    </ul>
+    
     <!-- MESSAGE -->
         <section id="sec01">
             <header>
                 <h2><span>MESSAGE</span></h2>
             </header>
             <div class="innerS">
-                <ul>
-                    <li>本登録をもって撮影に同意したものと見なします。</li>
-                    <li>登録する顔画像は正面を向いたものをご用意ください。</li>
-                </ul>
+                  <li>本登録をもって撮影に同意したものと見なします。</li>
+                  <li>登録する顔画像は正面を向いたものをご用意ください。</li>
             </div>
         </section>
     <!-- // MESSAGE -->
@@ -32,7 +27,9 @@
     <%= f.password_field :password_confirmation %>
     <br>
 
-    <%= f.submit '登録' %>
+    <%= f.submit '登録' %><br>
+
+    <%= link_to 'ログインはこちら', login_path %>
     </center>
 
 </block>

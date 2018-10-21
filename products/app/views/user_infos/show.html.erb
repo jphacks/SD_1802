@@ -1,10 +1,14 @@
-<%= @infos.each do |info| %>
-<p>
-  <%= image_tag info.file.thumb.url%><br>
-  #<%= info.name %><br>
-  #<%= info.memo %><br>
-</p>
-<% end %>
+<div class='info'>
+  
+  <% @infos.each do |info| %>
+  <p>
+    <%= image_tag info.file.thumb.url%><br>
+    <%= info.name %><br>
+    <%= info.memo %><br>
+  </p>
+  <% end %>
+    </tr>
+</div>
 
 
 <h1>現在のユーザ</h1>
