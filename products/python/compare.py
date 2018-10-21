@@ -163,7 +163,7 @@ def get_user_info(user_info_id):
     return dic
 
     
-def main(input_img_path):
+def main():
     # general setting
     args = parser.parse_args()
     dlib_path = '/home/ubuntu/Documents/SD_1802/products/python/shape_predictor_68_face_landmarks.dat'
@@ -179,32 +179,30 @@ def main(input_img_path):
             time.time() - start))
     # get register images & input image
     register_root_dir = '/home/ubuntu/Documents/SD_1802/products/public/uploads/'
-    #input_img_path = '/var/www/html/upload/image.jpg'
+    input_img_path = '/var/www/html/upload/image.jpg'
     
     mini = np.inf
     candidate = ""
 
-    print('start to calc')
-    for reg_img_path in get_all_images(register_root_dir):
-        d = getDistance(reg_img_path, input_img_path, align, net, imgDim, verbose=verbose)
-        if mini > d:
-            mini = d
-            candidate = reg_img_path
-
-    user_info_id = int(os.path.dirname(candidate).split('/')[-1])
-    user_info = get_user_info(user_info_id)
-    msg = '名前: {}\n情報: {}'.format(user_info['name'].encode('utf-8'), user_info['memo'].encode('utf-8'))
-    
-    Line(msg)
-
-if __name__ == '__main__':    
     while(1):
-        input_img_path = '/var/www/html/upload/image.jpg'
         if os.path.exists(input_img_path):
-            print('Found the {}'.format(os.path.basename(input_img_path)))
-            main(input_img_path)
+            print('start to calc')
+            for reg_img_path in get_all_images(register_root_dir):
+                d = getDistance(reg_img_path, input_img_path, align, net, imgDim, verbose=verbose)
+                if mini > d:
+                    mini = d
+                    candidate = reg_img_path
+
+            user_info_id = int(os.path.dirname(candidate).split('/')[-1])
+            user_info = get_user_info(user_info_id)
+            msg = '名前: {}\n情報: {}'.format(user_info['name'].encode('utf-8'), user_info['memo'].encode('utf-8'))
+    
+            Line(msg)
             os.remove(input_img_path)
         else:
             print('Not found the image.jpg in upload directory')
-
-        time.sleep(10)
+        
+        time.sleep(5)
+        
+if __name__ == '__main__':    
+        main()
