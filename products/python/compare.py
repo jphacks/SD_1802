@@ -28,6 +28,8 @@ import cv2
 import itertools
 import os
 import re
+import requests
+import sqlite3
 
 import numpy as np
 np.set_printoptions(precision=2)
@@ -61,18 +63,20 @@ def getRep(imgPath, align, net, imgDim, verbose=False):
     print("  + Original size: {}".format(rgbImg.shape))
 
     start = time.time()
+
+    print('before get bounding box')
     bb = align.getLargestFaceBoundingBox(rgbImg)
     if bb is None:
         raise Exception("Unable to find a face: {}".format(imgPath))
     if verbose:
         print("  + Face detection took {} seconds.".format(time.time() - start))
-    
+
+    print('after get bounding box')
     start = time.time()
     alignedFace = align.align(imgDim, rgbImg, bb,
                               landmarkIndices=openface.AlignDlib.OUTER_EYES_AND_NOSE)
-
-    cv2.imshow('aligned', alignedFace)
-    cv2.waitKey(0)
+    print('after face alingment')
+    
     if alignedFace is None:
         raise Exception("Unable to align image: {}".format(imgPath))
     if verbose:
@@ -80,12 +84,17 @@ def getRep(imgPath, align, net, imgDim, verbose=False):
 
         
     start = time.time()
+    print('start to calc')
+    print('net', net)
     rep = net.forward(alignedFace)
+    print('rep: ', len(rep))
     if verbose:
         print("  + OpenFace forward pass took {} seconds.".format(time.time() - start))
         #print("Representation:")
         #print(rep)
         print("-----\n")
+
+    print('finish to calc')
     return rep
 
 def getDistance(reg_img_path, input_img_path, align, net, imgDim, verbose=False):
@@ -116,7 +125,43 @@ def get_all_images(root_dir):
             if re.search(r'.jpg', f) or re.search(r'.png', f):
                 yield os.path.join(root, f)
 
-def main():
+def Line(mes):
+    TOKEN = "Tp7OqzzHAMtnGSY5KsFV4gcGd5Q4f3Z8nbvE4GVulb0"
+    URL = "https://notify-api.line.me/api/notify" 
+
+    message = "\n" + mes
+    
+    payload = {"message": message}
+    headers = {"Authorization": "Bearer " + TOKEN}
+    lineNotify = requests.post(URL, data=payload, headers=headers)
+
+def get_user_info(user_id):
+    """
+    rails で登録されている database から user_id に紐づく user_infos
+    
+    user_id: user_infos の外部キーになっている user_id
+
+    return: user_info の辞書
+    """
+
+    dbpath = '/home/ubuntu/Documents/SD_1802/products/db/development.sqlite3'
+    connection = sqlite3.connect(dbpath)
+    cursor = connection.cursor()
+
+    try:
+        cursor.execute('SELECT * FROM user_infos WHERE user_id = {}'.format(user_id))
+        res = cursor.fetchone()
+
+    except sqlite3.Error as e:
+            print('sqlite3.Error occurred:', e.args[0])
+
+    dic = {'name': res[1], 'memo': res[3]}
+    return dic
+
+    
+
+    
+def main(input_img_path):
     # general setting
     args = parser.parse_args()
     dlib_path = '/home/ubuntu/Documents/SD_1802/products/python/shape_predictor_68_face_landmarks.dat'
@@ -131,14 +176,37 @@ def main():
         print("Loading the dlib and OpenFace models took {} seconds.".format(
             time.time() - start))
     # get register images & input image
-    register_root_dir = '/home/ubuntu/Documents/SD_1802/products/public/uploads/'
-    input_img_path = '/home/ubuntu/Documents/SD_1802/products/python/image/input_image.jpg'
+    register_root_dir = '/home/ubuntu/Documents/SD_1802/products/public/uploads/JPHACKS'
+    #input_img_path = '/var/www/html/upload/image.jpg'
+    
+    mini = np.inf
+    candidate = ""
+    
     for reg_img_path in get_all_images(register_root_dir):
+        print('reg_img_path: ', reg_img_path)
+        print('input_img_path: ', input_img_path)
         d = getDistance(reg_img_path, input_img_path, align, net, imgDim, verbose=verbose)
-        print(d)
-        
-        
+        if mini > d:
+            mini = d
+            candidate = reg_img_path
+            
+    print('candidate: ', candidate)
+    print('score: ', mini)
+
+    Line(os.path.basename(candidate))
+    #Line(str(mini))
 
 if __name__ == '__main__':
-    main()
-
+    info = get_user_info(1)
+    msg = '名前: {} \n情報: {}'.format(info['name'], info['memo'])
+    Line(msg)
+    
+    #while(1):
+    #    time.sleep(10)
+    #    input_img_path = '/var/www/html/upload/image.jpg'
+    #    if os.path.exists(input_img_path):
+    #        print('Found the image.jpg')
+    #        main(input_img_path)
+    #        os.remove(input_img_path)
+    #    else:
+    #        print('Not found the image.jpg in upload directory')
