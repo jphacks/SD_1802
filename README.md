@@ -11,7 +11,9 @@
 久しぶりに会った人。一度しか会っていない人。見た事はあるけれど、どうしても名前が思い出せない！  
 でも「誰でしたっけ？」なんて言えないし...
 
-我々はそんな誰もが抱える悩みを解決しました。
+![lady](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/lady.jpg)
+
+**そんな誰もが抱える悩みを解決しました！！**
 
 
 ### 製品説明（具体的な製品の説明）
@@ -37,7 +39,7 @@
 結果はユーザーへ**LINE Notify**で通知されます。  
 スマートウォッチなどのウェアラブルデバイスを用いることで、相手に悟られる事なく名前を知ることができます。
 
-![model_image](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/model.png =600x)
+![model_image](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/model.png)
 
 ### 解決出来ること
 名前を忘れてしまった人に会ったとしても、円滑なコミュニケーションを行うことができます。
