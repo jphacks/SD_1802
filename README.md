@@ -40,7 +40,7 @@
 撮影された写真はサーバにアップロードされ、 Python + OpenFace で解析されます。  
 サーバー上に保存されている顔写真と一番近い人物が出力されます。
 
-実際に検出している様子
+実際に検出している様子  
 ![okano](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/okano.jpg)
 
 #### 3. 認証の結果をLINEで通知
