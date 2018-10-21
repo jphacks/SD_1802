@@ -1,6 +1,11 @@
 class UserInfosController < ApplicationController
   def new
-    @info = UserInfo.new(user_id: @current_user.id)
+    @info = UserInfo.find_by(user_id: @current_user.id)
+    if @info.present?
+      redirect_to profile_show_path
+    else
+      @info = UserInfo.new(user_id: @current_user.id)
+    end
   end
 
   def show

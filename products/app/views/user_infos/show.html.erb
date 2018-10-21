@@ -1,10 +1,18 @@
 <%= @infos.each do |info| %>
 <p>
-  <%= info.name %>
-  <%= image_tag info.file.url%>
+  <%= image_tag info.file.thumb.url%><br>
+  <%= info.name %><br>
+  <%= info.memo %><br>
 </p>
-
-
 <%end%>
 
 
+<h1>現在のユーザ</h1>
+<p>
+  <% @user_info = UserInfo.find_by(user_id: @current_user.id)%>
+  <%= @user_info.name%><br>
+</p>
+
+<p>
+  <%= link_to 'ログアウト', logout_path, method: :delete%>
+</p>

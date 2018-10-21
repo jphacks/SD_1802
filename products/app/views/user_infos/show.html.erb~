@@ -1,7 +1,7 @@
 <%= @infos.each do |info| %>
 <p>
   <%= info.name %>
-  <%= image_tag info.image.url%>
+  <%= image_tag info.file.url%>
 </p>
 
 

@@ -22,7 +22,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
-  process resize_to_limit: [512, 512]
+  process resize_to_limit: [800, 800]
   
   # Process files as they are uploaded:
   # process scale: [200, 300]
@@ -33,7 +33,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
    version :thumb do
-     process resize_to_fit: [200, 200]
+     process resize_to_fit: [256, 256]
    end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -45,6 +45,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
    def filename
-     "something.jpg" if original_filename
+     "enrolled_image.jpg"
    end
 end
