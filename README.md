@@ -1,6 +1,6 @@
 # タソカレ ~ 君の名は？ X Tech ~
 
-[![Product Name](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/top.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
+[![Product Name](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/top.png)](https://www.youtube.com/watch?v=BT4jsEthNRc&feature=youtu.be)
 
 ## 製品概要
 ### 君の名は？ X Tech
@@ -56,6 +56,7 @@
 + 撮影デバイス
     * お互いに登録していない場合はカメラを起動しないようにする。などでセキュリティを向上する。
 + WEBサイト
+    * 使いやすいデザインを目指す。
     * SNSのように友達登録機能を実装することで、無関係な人を撮影した際には結果を返さないようにする。
     * 撮影用デバイスを識別できるようにする。
 + LINE Bot
