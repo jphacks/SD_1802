@@ -1,9 +1,19 @@
 <%= form_for :session, url: login_path do |f| %>
-<%= f.text_field :mail %>
-<br>
-<%= f.password_field :password %>
-<br>
+    <block>
+        <h1>タソカレ 登録フォーム</h1>
+        <h2>注意事項</h2>
+        <ul>
+            <li>本登録をもって撮影に同意したものとみなします。</li>
+            <li>登録用の顔画像は正面を向いたものをご用意ください。</li>
+        </ul>
+        <%= f.label :mail %>
+        <%= f.text_field :mail %>
+        <br>
+        <%= f.label :password%>
+        <%= f.password_field :password %>
+        <br>
 
-<%= f.submit 'ログイン' %>
+        <%= f.submit 'ログイン' %>
+    </block>
 
 <% end %>

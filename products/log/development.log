@@ -1845,3 +1845,270 @@ Processing by UserInfosController#show as HTML
 Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/profile_show" for 110.165.178.54 at 2018-10-21 05:26:47 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UserInfosController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "43dc22bacead2ff7b6512f35803ad4eea78917f8c045e0f48dd733e185ba64d1"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Redirected to http://52.194.247.167:3000/login
+Filter chain halted as :require_sign_in! rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:26:47 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "43dc22bacead2ff7b6512f35803ad4eea78917f8c045e0f48dd733e185ba64d1"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 188ms (Views: 186.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:26:47 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "43dc22bacead2ff7b6512f35803ad4eea78917f8c045e0f48dd733e185ba64d1"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 110.165.178.54 at 2018-10-21 05:27:01 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/fd9LbgIwnLPEEXO8qg3XzaWOGGoYgy/1CEdDHccSUBuaONUf/l9k1jg0pza6v4tQ21KESENaTKoeXuK0klPow==", "session"=>{"mail"=>"", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "43dc22bacead2ff7b6512f35803ad4eea78917f8c045e0f48dd733e185ba64d1"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."mail" = ? LIMIT ?[0m  [["mail", ""], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:26
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Filter chain halted as :set_user rendered or redirected
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:29:08 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "43dc22bacead2ff7b6512f35803ad4eea78917f8c045e0f48dd733e185ba64d1"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 110.165.178.54 at 2018-10-21 05:30:24 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "43dc22bacead2ff7b6512f35803ad4eea78917f8c045e0f48dd733e185ba64d1"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 13.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:30:48 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "43dc22bacead2ff7b6512f35803ad4eea78917f8c045e0f48dd733e185ba64d1"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 110.165.178.54 at 2018-10-21 05:31:00 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4i1JNp9vbJC5rGCcjEMoOLyxsu7GZYvw06eJllXf8OdxstdPWJ7TcS5c986kAeFKyUrAnk8K7n2v/+8Q8Ir2BA==", "session"=>{"mail"=>"takehisa@example.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "43dc22bacead2ff7b6512f35803ad4eea78917f8c045e0f48dd733e185ba64d1"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."mail" = ? LIMIT ?[0m  [["mail", "takehisa@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."mail" = ? AND "users"."id" != ? LIMIT ?[0m  [["mail", "takehisa@example.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["updated_at", "2018-10-21 05:31:00.505117"], ["id", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://52.194.247.167:3000/profile
+Completed 302 Found in 84ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/profile" for 110.165.178.54 at 2018-10-21 05:31:00 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UserInfosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUserInfo Load (0.1ms)[0m  [1m[34mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_infos_controller.rb:3
+Redirected to http://52.194.247.167:3000/profile_show
+Completed 302 Found in 11ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/profile_show" for 110.165.178.54 at 2018-10-21 05:31:00 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UserInfosController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering user_infos/show.html.erb within layouts/application
+  [1m[36mUserInfo Load (0.1ms)[0m  [1m[34mSELECT "user_infos".* FROM "user_infos"[0m
+  ↳ app/views/user_infos/show.html.erb:1
+  [1m[36mUserInfo Load (0.1ms)[0m  [1m[34mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_infos/show.html.erb:12
+  Rendered user_infos/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile_show" for 110.165.178.54 at 2018-10-21 05:31:46 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UserInfosController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering user_infos/show.html.erb within layouts/application
+  [1m[36mUserInfo Load (0.1ms)[0m  [1m[34mSELECT "user_infos".* FROM "user_infos"[0m
+  ↳ app/views/user_infos/show.html.erb:1
+  [1m[36mUserInfo Load (0.1ms)[0m  [1m[34mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_infos/show.html.erb:12
+  Rendered user_infos/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile_show" for 110.165.178.54 at 2018-10-21 05:32:01 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UserInfosController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering user_infos/show.html.erb within layouts/application
+  [1m[36mUserInfo Load (0.1ms)[0m  [1m[34mSELECT "user_infos".* FROM "user_infos"[0m
+  ↳ app/views/user_infos/show.html.erb:1
+  [1m[36mUserInfo Load (0.1ms)[0m  [1m[34mSELECT  "user_infos".* FROM "user_infos" WHERE "user_infos"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_infos/show.html.erb:12
+  Rendered user_infos/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:34:29 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:34:56 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ubuntu/Documents/SD_1802/products/app/views/sessions/new.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+...buffer.append=( f.label :mail 'address');@output_buffer.safe...
+...                              ^):
+  
+app/views/sessions/new.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:35:05 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:35:14 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:35:16 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:35:24 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:35:32 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (158.9ms)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `メールアドレス' for #<#<Class:0x00005645a04788a8>:0x00007f9b1d969190>):
+     6:             <li>本登録をもって撮影に同意したものとみなします。</li>
+     7:             <li>登録用の顔画像は正面を向いたものをご用意ください。</li>
+     8:         </ul>
+     9:         <%= f.label :mail, メールアドレス%>
+    10:         <%= f.text_field :mail %>
+    11:         <br>
+    12:         <%= f.label :password%>
+  
+app/views/sessions/new.html.erb:9:in `block in _app_views_sessions_new_html_erb__1256746897135152703_70152096535420'
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb__1256746897135152703_70152096535420'
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:36:10 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:36:35 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 110.165.178.54 at 2018-10-21 05:37:07 +0000
+Cannot render console from 110.165.178.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT ?[0m  [["remember_token", "e98967a4e0f6aefc79748e4ab6bbde840191ceb35b33d744681e41aa7dc51361"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.1ms)
+
+
