@@ -114,3 +114,13 @@ textarea {
 .far {
   margin-right: 6px;
 }
+
+
+// self
+.jumbotron-extend{
+  position: relative;
+  height: 100vh;
+  min-height: 300px;
+  background: url(resources/big-top1-dark.jpg) center no-repeat;
+  background-size: cover;
+}

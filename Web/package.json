@@ -60,6 +60,7 @@
     "paypal-rest-sdk": "^1.8.1",
     "popper.js": "^1.14.4",
     "pug": "^2.0.3",
+    "react-dropzone": "^6.2.4",
     "request": "^2.88.0",
     "stripe": "^6.10.0",
     "tumblr.js": "^2.0.0",

@@ -1,12 +1,26 @@
 extends layout
 
 block content
-  h1 タソカレ
-  p.lead A boilerplate for Node.js web applications.
-  hr
-  .row
-    .col-md-6
-      h2 Heading
-      p Hello World
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
+  div.jumbotron(style="position: relative; height: 100vh; min-height:300px; background:url(resources/big-top1-dark.jpg) center no-repeat; background-size: cover;")
+    div.container(style="position: relative; top:50%; transform: translateY(-50%);")
+
+      h1.text-white(style="font-size: 500%; font-family: 'Playfair Display', serif;") tasokare
+      p.loead.text-white(style="font-size: 200%; font-family: 'Avenir', serif;") 最先端のAIテクノロジーがあなたの記憶をサポートします。
+
+      h2
+        a.center-block.btn.btn-default.btn-lg.btn-block(href='/login', role='button') 
+          .text-white(style="font-family: 'Avenir', serif;") Login »
+      
+        a.center-block.btn.btn-default.btn-lg.btn-block(href='/signup', role='button')
+          .text-white(style="font-family: 'Avenir', serif;") Sign up »
+    
+      //- .row
+      //-   .col-md-6
+      //-     h2
+      //-       a.center-block.btn.btn-default.btn-lg.btn-block(href='/login', role='button') 
+      //-         .text-white Login »
+
+      //-   .col-md-6
+      //-     h2
+      //-       a.center-block.btn.btn-default.btn-lg.btn-block(href='/signup', role='button')
+      //-         .text-white Sign up »

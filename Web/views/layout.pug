@@ -10,12 +10,15 @@ html
     link(rel='shortcut icon', href='/favicon.png')
     link(rel='stylesheet', href='/css/main.css')
 
+
   body
     include partials/header
 
-    .container
-      include partials/flash
-      block content
+    //- .container
+    //-   include partials/flash
+    //-   block content
+    include partials/flash
+    block content
 
     include partials/footer
 

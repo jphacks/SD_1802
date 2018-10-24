@@ -2,7 +2,7 @@ extends ../layout
 
 block content
   .pb-2.mt-2.mb-4.border-bottom
-    h3 Profile Information
+    h3(style="margin-left:100px") Profile Information
 
   form(action='/account/profile', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
@@ -45,7 +45,7 @@ block content
           | Update Profile
 
   .pb-2.mt-2.mb-4.border-bottom
-    h3 Change Password
+    h3(style="margin-left:100px") Change Password
 
   form(action='/account/password', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
@@ -64,7 +64,7 @@ block content
           | Change Password
 
   .pb-2.mt-2.mb-4.border-bottom
-    h3 Delete Account
+    h3(style="margin-left:100px") Delete Account
 
   form(action='/account/delete', method='POST', onsubmit="return confirm('Are you sure you want to delete your account?');")
     .form-group
@@ -76,7 +76,7 @@ block content
           | Delete my account
 
   .pb-2.mt-2.mb-4.border-bottom
-    h3 Linked Accounts
+    h3(style="margin-left:100px") Linked Accounts
   .form-group
     .offset-sm-3.col-md-7.pl-2
       if user.instagram
