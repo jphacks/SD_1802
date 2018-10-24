@@ -39,15 +39,20 @@
 #### 2. OpenFace を用いた顔認証
 撮影された写真はサーバにアップロードされ、 Python + OpenFace で解析されます。  
 サーバー上に保存されている顔写真と一番近い人物が出力されます。
-
-実際に検出している様子  
-![okano](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/okano.jpg)
+  
+![okano](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/okano.jpg)  
+(実際に検出している様子)
 
 #### 3. 認証の結果をLINEで通知
 結果はユーザーへ LINE Notify で通知されます。  
 スマートウォッチなどのウェアラブルデバイスを用いることで、相手に悟られる事なく名前を知ることができます。
 
 ![model_image](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/model.png)
+
+さらに、ユーザに関する+αの情報を受け取る事で、さらに会話を盛り上げる事ができます。
+
+![result](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/LINE.png)  
+(通知の様子)
 
 ### 解決出来ること
 名前を忘れてしまった人に会ったとしても、その人の名前を知ることができ、円滑なコミュニケーションが実現できます。
