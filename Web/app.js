@@ -20,8 +20,20 @@ const expressStatusMonitor = require('express-status-monitor');
 const sass = require('node-sass-middleware');
 const multer = require('multer');
 
-const upload = multer({ dest: path.join(__dirname, 'uploads') });
+// const upload = multer({ dest: path.join(__dirname, 'uploads') });
+// multer
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, 'tmp.jpg')
+  }
+})
+var upload = multer({ storage: storage })
+// const upload = multer({dest: path.join(__dirname, 'uploads'), filename: 'tmp.jpg'});
 
+  
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
  */
@@ -90,7 +102,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use((req, res, next) => {
-  if (req.path === '/api/upload') {
+  if (req.path === '/upload') {
     next();
   } else {
     lusca.csrf()(req, res, next);
@@ -144,7 +156,8 @@ app.post('/account/password', passportConfig.isAuthenticated, userController.pos
 app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
 
-app.post('/upload', upload.single('upName'), uploadController.upload);
+app.get('/upload', uploadController.getFileUpload);
+app.post('/upload', upload.single('myFile'), uploadController.upload);
 
 /**
  * API examples routes.

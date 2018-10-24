@@ -3,7 +3,13 @@
  * Home page.
  */
 exports.index = (req, res) => {
-  res.render('home', {
-    title: 'Home'
-  });
+  if(req.user){
+    res.render('index',{
+      title: 'Index'
+    });
+  } else {
+    res.render('home', {
+      title: 'Home'
+    });
+  }
 };

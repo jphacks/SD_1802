@@ -593,9 +593,10 @@ exports.getLob = (req, res, next) => {
  */
 
 exports.getFileUpload = (req, res) => {
-  res.render('api/upload', {
-    title: 'File Upload'
-  });
+  return res.redirect('/account');
+  // res.render('api/upload', {
+  //   title: 'File Upload'
+  // });
 };
 
 exports.postFileUpload = (req, res) => {
