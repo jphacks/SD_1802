@@ -39,6 +39,8 @@
 そのサイトを通じて自分の写真をアップロードし、データベースに名前と写真を登録しましょう。  
 その登録をもって、デバイスからの撮影に同意したものとみなします。
 
+![website](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/website.jpg)
+
 #### 1. Raspberry Pi で写真を撮影・アップロード
 撮影デバイスには Raspberry Pi 3 Model B+ を用いました。  
 ポケットサイズなのでユーザーは素早く手軽に写真を撮影することが可能です。
