@@ -62,7 +62,7 @@
 
 ユーザに関する+αの情報を受け取る事で、さらに会話を盛り上げる事ができます。
 
-![result](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/LINE2.png) 
+![result](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/line-notify.png) 
 
 (通知の様子)
 
