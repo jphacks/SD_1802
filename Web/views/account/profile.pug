@@ -7,34 +7,55 @@ block content
   .row(style="margin-left: 100px")
     .col-md-5
       h4 User Image
+      img.img-thumbnail(src='statics/'+user.profile.name+'.jpg')
       form(action='/upload', role='form', enctype='multipart/form-data', method='POST')
         .form-group
           input(type='file', name='myFile')
         button.btn.btn-primary(type='submit') Submit
 
     .col-md-5
-      h4 User Info
-        form(action='/account/profile', method='POST')
-          input(type='hidden', name='_csrf', value=_csrf)
-          .form-group.row
-            label.col-md-3.col-form-label.font-weight-bold.text-right(for='email') Email
-            .col-md-7
-              input.form-control(type='email', name='email', id='email', value=user.email, autocomplete='email')
-          .form-group.row
-            label.col-md-3.col-form-label.font-weight-bold.text-right(for='name') Name
-            .col-md-7
-              input.form-control(type='text', name='name', id='name', value=user.profile.name, autocomplete='name')
-          .form-group.row
-            label.col-md-3.col-form-label.font-weight-bold.text-right Gravatar
-            .col-sm-4
-              img(src=user.gravatar(), class='profile', width='100', height='100')
-          .form-group
-            .offset-sm-3.col-md-7.pl-2
-              button.btn.btn.btn-primary(type='submit')
-                i.fas.fa-pencil-alt.fa-sm
-                | Update Profile
-    
+      form(action='/account/profile', method='POST')
+        input(type='hidden', name='_csrf', value=_csrf)
+        .form-group.row
+          label.col-md-3.col-form-label.font-weight-bold.text-right(for='email') Email
+          .col-md-7
+            input.form-control(type='email', name='email', id='email', value=user.email, autocomplete='email')
+        .form-group.row
+          label.col-md-3.col-form-label.font-weight-bold.text-right(for='name') Name
+          .col-md-7
+            input.form-control(type='text', name='name', id='name', value=user.profile.name, autocomplete='name')
+        .form-group.row
+          label.col-md-3.col-form-label.font-weight-bold.text-right Gender
+          .col-sm-6
+            label.radio.col-sm-3
+              input(type='radio', checked=user.profile.gender=='male', name='gender', value='male', data-toggle='radio')
+              span Male
+            label.radio.col-sm-3
+              input(type='radio', checked=user.profile.gender=='female', name='gender', value='female', data-toggle='radio')
+              span Female
+            label.radio.col-sm-3
+              input(type='radio', checked=user.profile.gender=='other', name='gender', value='other', data-toggle='radio')
+              span Other
+        .form-group.row
+          label.col-md-3.col-form-label.font-weight-bold.text-right(for='location') Location
+          .col-md-7
+            input.form-control(type='text', name='location', id='location', value=user.profile.location, autocomplete)
+        //- .form-group.row
+        //-   label.col-md-3.col-form-label.font-weight-bold.text-right(for='website') Website
+        //-   .col-md-7
+        //-     input.form-control(type='text', name='website', id='website', value=user.profile.website, autocomplete='url')
+        //- .form-group.row
+        //-   label.col-md-3.col-form-label.font-weight-bold.text-right Gravatar
+        //-   .col-sm-4
+        //-     img(src=user.gravatar(), class='profile', width='100', height='100')
+        .form-group
+          .offset-sm-3.col-md-7.pl-2
+            button.btn.btn.btn-primary(type='submit')
+              i.fas.fa-pencil-alt.fa-sm
+              | Update Profile
 
+    
+  hr
   .pb-2.mt-2.mb-4.border-bottom
     h3(style="margin-left:100px") Change Password
 
