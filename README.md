@@ -62,12 +62,14 @@
 
 ユーザに関する+αの情報を受け取る事で、さらに会話を盛り上げる事ができます。
 
-![result](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/LINE.png) 
+![result](https://raw.githubusercontent.com/jphacks/SD_1802/img1/Image/line-notify.png) 
 
 (通知の様子)
 
 ### 解決出来ること
-名前を忘れてしまった人に会ったとしても、その人の名前を知ることができ、円滑なコミュニケーションが実現できます。
+顔写真から登録しているユーザーを逆引きすることができます。
+
+例えば、人の名前を忘れてしまっても、その人の名前を知ることができます。
 
 ### 今後の展望
 + 撮影デバイス
