@@ -2,18 +2,18 @@ extends ../layout
 
 block content
   .pb-2.mt-2.mb-4.border-bottom
-    h3(style="margin-left:100px") Profile Information
+    h3(style="margin-left:100px; font-family: Avenir") Profile Information
 
-  .row(style="margin-left: 100px")
-    .col-md-5
-      h4 User Image
+  .row(style="margin-left: 100px; font-family: Avenir")
+    .col-md-4
+      h4(style="font-family: Avenir") User Image
       img.img-thumbnail(src='statics/'+user.profile.name+'.jpg')
       form(action='/upload', role='form', enctype='multipart/form-data', method='POST')
         .form-group
           input(type='file', name='myFile')
         button.btn.btn-primary(type='submit') Submit
 
-    .col-md-5
+    .col-md-4
       form(action='/account/profile', method='POST')
         input(type='hidden', name='_csrf', value=_csrf)
         .form-group.row
@@ -27,17 +27,17 @@ block content
         .form-group.row
           label.col-md-3.col-form-label.font-weight-bold.text-right Gender
           .col-sm-6
-            label.radio.col-sm-3
+            label.radio.col-sm-4
               input(type='radio', checked=user.profile.gender=='male', name='gender', value='male', data-toggle='radio')
               span Male
-            label.radio.col-sm-3
+            label.radio.col-sm-4
               input(type='radio', checked=user.profile.gender=='female', name='gender', value='female', data-toggle='radio')
               span Female
-            label.radio.col-sm-3
-              input(type='radio', checked=user.profile.gender=='other', name='gender', value='other', data-toggle='radio')
-              span Other
+            //- label.radio.col-sm-3
+            //-   input(type='radio', checked=user.profile.gender=='other', name='gender', value='other', data-toggle='radio')
+            //-   span Other
         .form-group.row
-          label.col-md-3.col-form-label.font-weight-bold.text-right(for='location') Location
+          label.col-md-3.col-form-label.font-weight-bold.text-right(for='location') Message
           .col-md-7
             input.form-control(type='text', name='location', id='location', value=user.profile.location, autocomplete)
         //- .form-group.row
@@ -57,7 +57,7 @@ block content
     
   hr
   .pb-2.mt-2.mb-4.border-bottom
-    h3(style="margin-left:100px") Change Password
+    h3(style="margin-left:100px; font-family: Avenir") Change Password
 
   form(action='/account/password', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
