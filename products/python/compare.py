@@ -129,7 +129,7 @@ def get_all_images(root_dir):
                 yield os.path.join(root, f)
 
 def Line(mes):
-    TOKEN = "Tp7OqzzHAMtnGSY5KsFV4gcGd5Q4f3Z8nbvE4GVulb0"
+    TOKEN = ""
     URL = "https://notify-api.line.me/api/notify" 
 
     message = "\n" + mes
